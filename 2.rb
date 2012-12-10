@@ -3,6 +3,7 @@
 # 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ...
 
 # By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
+
 public
 
 def sum(a)
@@ -24,8 +25,8 @@ end
 
 def generate_fibonaccis(input)
 	fibonaccis = [1,2] # Because Fibonaccis gotta go somewhere.
-	y = 1 # Just to ...
-	z = 2 # get the party ...
+	y = 1 	# Just to ...
+	z = 2 	# get the party ...
 	a = nil # ... started.
 	loop do 
 		a = y + z
