@@ -6,28 +6,25 @@ require_relative "timer"
 
 def find_biggest_prime_factor(n)
 	n2 = n + 1
-	mod = nil
 	loop do
 		n2 -= 1
 		mod = n % n2
-		if mod == 0
-			status = is_prime?(n2)
-		end
-	break if status == true
+	break if mod == 0 and is_prime?(n2)
 	end
-	n2
+	n2 
 end
-	
+
 def is_prime?(n)
-	i = 0
-	n2 = n
+	n2 = Math.sqrt(n).round
+	indicator = 0
 	until n2 == 2
-		if (n % (n2 - 1)) == 0
-			i += 1
+		mod = n % n2
+		if mod == 0
+			indicator += 1
 		end
 		n2 -= 1
 	end
-	if i == 0
+	if indicator == 0
 		true
 	else
 		false
