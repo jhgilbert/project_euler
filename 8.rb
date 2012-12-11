@@ -7,20 +7,9 @@ def solution(number)
 	array.map!{ |n| n.to_i }
 	array2 = []
 	until array.length == 4
-		x = multiply(array[0..4])
+		x = array[0..4].inject(:*)
 		array2 << x
 		array.delete_at(0)
 	end
 	array2.max
-end
-
-def multiply(array) #works
-	last = 1
-	n = nil
-	array.each do |i|
-		n = i * last
-		i = n
-		last = i
-	end
-	n
 end
